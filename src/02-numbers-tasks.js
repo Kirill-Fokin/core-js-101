@@ -35,8 +35,8 @@ function getRectangleArea(w, h) {
  *   3.14 => 19.729201864543903
  *   0    => 0
  */
-function getCircleCircumference(/* radius */) {
-  throw new Error('Not implemented');
+function getCircleCircumference(radius) {
+  return 2 * 3.14159265358979323846 * radius;
 }
 
 /**
@@ -125,8 +125,9 @@ function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
  *     5     => 5
  *     0     => 0
  */
-function getLastDigit(/* value */) {
-  throw new Error('Not implemented');
+function getLastDigit(a) {
+  const n = -(String(a).slice(-1));
+  return a < 0 ? n : -n;
 }
 
 
@@ -141,10 +142,9 @@ function getLastDigit(/* value */) {
  *     '37'     => 37
  * '-525.5'     => -525.5
  */
-function parseNumberFromString(/* value */) {
-  throw new Error('Not implemented');
+function parseNumberFromString(str) {
+  return +str;
 }
-
 /**
  * Returns a diagonal length of the rectangular parallelepiped given by its sides a,b,c.
  *
@@ -158,13 +158,14 @@ function parseNumberFromString(/* value */) {
  *   3,3,3   => 5.196152422706632
  *   1,2,3   => 3.741657386773941
  */
-function getParallelepipedDiagonal(/* a, b, c */) {
-  throw new Error('Not implemented');
+function getParallelepipedDiagonal(a, b, c) {
+  const quadradDiagonal = a * a + b * b + c * c;
+  return Math.sqrt(quadradDiagonal);
 }
 
 
 /**
- * Returns the number rounded to specified power of 10.
+ *c
  *
  * @param {number} num
  * @param {number} pow
